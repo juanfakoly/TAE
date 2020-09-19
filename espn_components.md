@@ -53,7 +53,7 @@
 	private WebElement userNameDisplayed;
 ```
 
-## LOG OUT
+## LOG OUT COMPONENTS
 
 ```java
 @FindBy(id="global-user-trigger")
@@ -67,7 +67,7 @@
 
 ```
 
-## DELETE ACCOUNT
+## DELETE ACCOUNT COMPONENTS
 
 ```java
 @FindBy(id="global-user-trigger")
