@@ -60,7 +60,7 @@
 	private WebElement btnUser;
 
 @FindBy(css="li:nth-child(2) [onclick='javascript:espn.memberservices.logout();return false;']")
-	private WebElement btnLogIn;
+	private WebElement btnLogOut;
 
 @FindBy(css=".display-user span")
 	private WebElement userNameDisplayed;

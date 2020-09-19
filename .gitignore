@@ -6,5 +6,6 @@ test-output
 .DS_Store
 .idea/
 autotraining.iml
+espn_interactions.md
 pom.xlm
 /src
