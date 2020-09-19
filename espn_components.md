@@ -6,7 +6,7 @@
 @FindBy(id="global-user-trigger")
 	private WebElement btnUser;
 
-@FindBy(css="li:nth-child(2)  a[tref='/members/v3_1/login']")
+@FindBy(css="li:nth-child(2) [tref='/members/v3_1/login']")
 	private WebElement btnLogIn;
 
 @FindBy(css="[did-translate='login.label.CREATE_ACCOUNT']")
@@ -26,6 +26,9 @@
 
 @FindBy(css="[did-translate='create.SIGN_UP']")
 	private WebElement btnCreateAccount;
+
+@FindBy(css=".display-user span")
+	private WebElement userNameDisplayed;
 ```
 
 ## LOG IN COMPONENTS
@@ -45,6 +48,9 @@
 
 @FindBy(css="[did-translate='login.label.SIGNIN']")
 	private WebElement btnEnter;
+
+@FindBy(css=".display-user span")
+	private WebElement userNameDisplayed;
 ```
 
 ## LOG OUT
@@ -53,7 +59,30 @@
 @FindBy(id="global-user-trigger")
 	private WebElement btnUser;
 
-@FindBy(xpath="//a[text()='Log Out']")
+@FindBy(css="li:nth-child(2) [onclick='javascript:espn.memberservices.logout();return false;']")
 	private WebElement btnLogIn;
+
+@FindBy(css=".display-user span")
+	private WebElement userNameDisplayed;
+
+```
+
+## DELETE ACCOUNT
+
+```java
+@FindBy(id="global-user-trigger")
+	private WebElement btnUser;
+
+@FindBy(css="li:nth-child(2) [tref='/members/v3_1/modifyAccount']")
+	private WebElement btnModifyAccount;
+
+@FindBy(id="cancel-account")
+	private WebElement btnDeleteAccount;
+
+@FindBy(css="[did-translate='deactivate.confirmation.buttons.confirm']")
+	private WebElement btnDeleteConfirmation;
+
+@FindBy(css=".display-user span")
+	private WebElement userNameDisplayed;
 
 ```
