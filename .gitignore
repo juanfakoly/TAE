@@ -7,3 +7,5 @@ test-output
 .idea/
 autotraining.iml
 espn_components.md
+/target
+chromedriver

@@ -17,10 +17,19 @@ public class WikiHomePage extends BasePage{
 	
 	@FindBy(xpath="//*[@id='search-form']/fieldset/button")
 	private WebElement searchButton;
+
+	@FindBy(id="searchButton")
+	private WebElement searchButtonI;
 	
 	public ArticlePage buscar(String busqueda) {
 		searchInput.sendKeys(busqueda);
 		searchButton.click();
+		return new ArticlePage(getDriver());
+	}
+
+	public ArticlePage InternalSearch(String search) {
+		searchInput.sendKeys(search);
+		searchButtonI.click();
 		return new ArticlePage(getDriver());
 	}
 }
