@@ -2,7 +2,7 @@
 
 ## CREATE AN ACCOUNT IN ESPN PAGE 
 
-```java
+```gherkin
 Feature: Create Account in ESPN page
   As user want create an account to manager my espn services
 
@@ -33,7 +33,7 @@ Feature: Create Account in ESPN page
 
 ## LOG INTO ESPN PAGE
 
-```java
+```gherkin
 Feature: Log in ESPN page
   As user want log into my espn account
 
@@ -63,7 +63,7 @@ Feature: Log in ESPN page
 
 ## DELETE ESPN ACCOUNT
 
-```java
+```gherkin
 Feature: Delete ESPN account
   As user want log into my espn account to delete it
 
