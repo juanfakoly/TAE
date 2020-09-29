@@ -13,7 +13,7 @@ once there you should choose the web browser to run the test
 ```xml
 <parameter name="browser" value="" />
 ```
-there you should find another parameter as well 
+there you should find another parameters
 
 ```xml
 	<parameter name="firstName" value="" />
@@ -22,4 +22,4 @@ there you should find another parameter as well
     <parameter name="password" value="" />
 ```
 
-* IS NECESARY SET EVERY VALUE TO THESE PARAMATERS.
+* IS NECESSARY SET EVERY VALUE TO THESE PARAMETERS.
