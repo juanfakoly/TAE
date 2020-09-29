@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="My test suite" verbose="1" parallel="false">
+    <parameter name="browser" value="" />
+    <parameter name="firstName" value="" />
+    <parameter name="lastName" value="" />
+    <parameter name="email" value="" />
+    <parameter name="password" value="" />
+    <test name="My first test" preserve-order="true">
+        <classes>
+            <class name="com.automation.espn.EspnSignInTest" />
+            <class name="com.automation.espn.EspnLogInTest" />
+            <class name="com.automation.espn.EspnDeleteAccountTest" />
+        </classes>
+    </test>
+</suite>

@@ -7,9 +7,10 @@ test-output
 .idea/
 autotraining.iml
 espn_components.md
-pom.xml
 espn_interactions.md
-/src
 /target
 chromedriver
 bank_interactions.md
+test_cases.md
+geckodriver
+create_account.feature
