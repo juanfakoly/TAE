@@ -5,8 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class EspnLogIn extends BasePage {
@@ -38,13 +36,6 @@ public class EspnLogIn extends BasePage {
 
     @FindBy(css="#disneyid-wrapper #disneyid-iframe")
     private WebElement iframeSignIn;
-
-    private List<WebElement> webElementList() {
-        List<WebElement> webElementList = new ArrayList<>();
-        webElementList.add(txtUserName);
-        webElementList.add(txtPassword);
-        return webElementList;
-    }
 
     private void logIn(String username, String password) {
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(btnUser));

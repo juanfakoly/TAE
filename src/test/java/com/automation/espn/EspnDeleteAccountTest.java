@@ -11,7 +11,7 @@ public class EspnDeleteAccountTest extends BaseTest {
 
     @Test
     @Parameters({"email", "password"})
-    public void espnDeleteAccount(String email, String password) throws InterruptedException {
+    public void espnDeleteAccount(String email, String password) {
         EspnLogIn espnLogIn = getEspnLogIn();
         EspnDeleteAccount espnDeleteAccount = espnLogIn.logInAndDeleteAccount(email, password);
         EspnLogged espnLogged = espnDeleteAccount.deleteAccount();

@@ -1,14 +1,11 @@
 package com.automation.espn.pages;
 
+import com.automation.espn.utils.WaitUntilPageReloaded;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-import static com.automation.espn.utils.WaitUntilPageReloaded.waitUntilPageReloaded;
 
 public class EspnLogOut extends BasePage {
 
@@ -31,9 +28,7 @@ public class EspnLogOut extends BasePage {
 
     public EspnLogged logOut() {
         driver.switchTo().defaultContent();
-        while (waitUntilPageReloaded(driver)) {
-            Logger.getLogger("wait").log(Level.INFO, "loading");
-        }
+        WaitUntilPageReloaded.loading(driver);
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(btnUser));
         btnUser.click();
         setUserName(userName);

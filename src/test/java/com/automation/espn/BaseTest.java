@@ -4,8 +4,6 @@ import com.automation.espn.pages.EspnLogIn;
 import com.automation.espn.pages.EspnSignIn;
 import org.testng.annotations.*;
 
-import java.net.MalformedURLException;
-
 public class BaseTest {
 
     private MyDriver myDriver;
