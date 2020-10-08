@@ -17,6 +17,6 @@ Make sure that capabilities are ready in the following path: `src/test/resources
 }
 ```
 
-- IS NECESSARY SET EVERY VALUE TO THESE CAPABILITIES.
+- IS NECESSARY SET EVERY VALUE TO THESE CAPABILITIES AND THE VALUE OF `noReset` CAPABILITIE SHOULD BE __TRUE__
 
 __it is necessary after executing restart the appium session__ 
