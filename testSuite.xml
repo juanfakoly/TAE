@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!--Example Test Suite-->
+<!--@author Brayhan.Criollo-->
+
+<suite name="Suite1" verbose="1" parallel="false">
+    <test name="API test" preserve-order="true">
+<!--        Desired Classes -->
+<!--        or Packages-->
+        <classes>
+            <class name="academyapi.FirstTest" />
+        </classes>
+    </test>
+</suite>
