@@ -13,14 +13,14 @@ public class TrivagoTest extends BaseMobileTest {
         PrivacidadDeDatosScreen privacidadDeDatosScreen = selectTheLanguageScreen.selectColombia();
         Assert.assertTrue(selectTheLanguageScreen.getTxtPrivacidadDeDatos().isDisplayed());
         privacidadDeDatosScreen.acceptDataPrivacy();
-        Assert.assertTrue(privacidadDeDatosScreen.getTxtDestino().isDisplayed());
+        Assert.assertTrue(privacidadDeDatosScreen.getIsDisplayed());
     }
 
     @Test(priority = 2)
     public void buscarHotel() {
         BuscarHotelesScreen buscarHotelesScreen = new BuscarHotelesScreen(getDriver());
         buscarHotelesScreen.buscarHotelesScreen();
-        Assert.assertTrue(buscarHotelesScreen.getTarjetaHotel().isDisplayed());
+        Assert.assertTrue(buscarHotelesScreen.getIsDisplayed());
 
     }
 
@@ -34,7 +34,7 @@ public class TrivagoTest extends BaseMobileTest {
     public void configurarPrivacidad() {
         ConfigurarPrivacidadScreen configurarPrivacidadScreen = new ConfigurarPrivacidadScreen(getDriver());
         configurarPrivacidadScreen.configurarPrivacidadScreen();
-        Assert.assertFalse(configurarPrivacidadScreen.getOptFacebook().isSelected());
+        Assert.assertFalse(configurarPrivacidadScreen.getIsSelected());
     }
 }
 

@@ -7,6 +7,8 @@ import util.screens.BaseScreen;
 
 public class ConfigurarPrivacidadScreen extends BaseScreen {
 
+    private boolean isSelected;
+
     /**
      * Constructor method for standard screen object.
      *
@@ -34,15 +36,15 @@ public class ConfigurarPrivacidadScreen extends BaseScreen {
         optFacebook.click();
         btnGuardar.click();
         btnConfigurarPrivacidad.click();
-        setOptFacebook(optFacebook);
+        setIsSelected(optFacebook.isSelected());
         return new ConfigurarPrivacidadScreen(driver);
     }
 
-    public AndroidElement getOptFacebook() {
-        return optFacebook;
+    public boolean getIsSelected() {
+        return isSelected;
     }
 
-    public void setOptFacebook(AndroidElement optFacebook) {
-        this.optFacebook = optFacebook;
+    public void setIsSelected(boolean isSelected) {
+        this.isSelected = isSelected;
     }
 }

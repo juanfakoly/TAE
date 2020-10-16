@@ -9,6 +9,7 @@ import util.screens.BaseScreen;
 public class BuscarHotelesScreen extends BaseScreen {
 
     private CustomWait customWait = new CustomWait();
+    private boolean isDisplayed;
     private static final String FIRST_LOCATOR = "new UiSelector().className(\"android.widget.TextView\").textContains(\"Cartagena\")";
     private static final String SECOND_LOCATOR = "new UiScrollable(new UiSelector().scrollable(true))" +
             ".scrollIntoView(new UiSelector().className(\"android.widget.TextView\").textContains(\"noviembre\")" +
@@ -70,15 +71,15 @@ public class BuscarHotelesScreen extends BaseScreen {
         optFecha2.click();
         btnConfirmarFechas.click();
         customWait.waitAndroidElementToBeClickable(driver, tarjetaHotel, 10);
-        setTarjetaHotel(tarjetaHotel);
+        setIsDisplayed(tarjetaHotel.isDisplayed());
         return new BuscarHotelesScreen(driver);
     }
 
-    public AndroidElement getTarjetaHotel() {
-        return tarjetaHotel;
+    public boolean getIsDisplayed() {
+        return isDisplayed;
     }
 
-    public void setTarjetaHotel(AndroidElement tarjetaHotel) {
-        this.tarjetaHotel = tarjetaHotel;
+    public void setIsDisplayed(boolean isDisplayed) {
+        this.isDisplayed = isDisplayed;
     }
 }

@@ -9,6 +9,7 @@ import util.screens.BaseScreen;
 public class PrivacidadDeDatosScreen extends BaseScreen {
 
     private CustomWait customWait = new CustomWait();
+    private boolean isDisplayed;
 
     /**
      * Constructor method for standard screen object.
@@ -28,15 +29,15 @@ public class PrivacidadDeDatosScreen extends BaseScreen {
     public PrivacidadDeDatosScreen acceptDataPrivacy() {
         btnAceptarTodo.click();
         customWait.waitAndroidElementToBeClickable(driver, txtDestino, 10);
-        setTxtDestino(txtDestino);
+        setDisplayed(txtDestino.isDisplayed());
         return new PrivacidadDeDatosScreen(driver);
     }
 
-    public AndroidElement getTxtDestino() {
-        return txtDestino;
+    public boolean getIsDisplayed() {
+        return isDisplayed;
     }
 
-    public void setTxtDestino(AndroidElement txtDestino) {
-        this.txtDestino = txtDestino;
+    public void setDisplayed(boolean isDisplayed) {
+        this.isDisplayed = isDisplayed;
     }
 }
