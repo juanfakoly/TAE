@@ -13,7 +13,7 @@ public class EspnSignInTest extends BaseTest  {
         EspnSignIn espnSignIn = getEspnSignIn();
         EspnLogOut espnLogOut = espnSignIn.signIn(firstName, lastName, email, password);
         EspnLogged espnLogged = espnLogOut.logOut();
-        Assert.assertEquals(espnLogOut.getUserName().getText(), firstName + "!");
+        Assert.assertEquals(espnLogOut.getUserNameText(), firstName + "!");
         Assert.assertTrue(espnLogged.notlogged());
     }
 }

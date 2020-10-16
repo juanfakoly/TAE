@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class EspnLogOut extends BasePage {
 
     private WebDriver driver;
+    private String userNameText;
 
     public EspnLogOut(WebDriver driver) {
         super(driver);
@@ -31,16 +32,16 @@ public class EspnLogOut extends BasePage {
         WaitUntilPageReloaded.loading(driver);
         new WebDriverWait(driver, 10).until(ExpectedConditions.elementToBeClickable(btnUser));
         btnUser.click();
-        setUserName(userName);
+        setUserNameText(userName.getText());
         btnLogOut.click();
         return new EspnLogged(getDriver());
     }
 
-    public WebElement getUserName() {
-        return userName;
+    public String getUserNameText() {
+        return userNameText;
     }
 
-    public void setUserName(WebElement userName) {
-        this.userName = userName;
+    public void setUserNameText(String userNameText) {
+        this.userNameText = userNameText;
     }
 }
