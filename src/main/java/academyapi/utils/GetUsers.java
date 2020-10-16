@@ -1,4 +1,4 @@
-package academyapi;
+package academyapi.utils;
 
 import academyapi.pojos.User;
 import java.io.IOException;

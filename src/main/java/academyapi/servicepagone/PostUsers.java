@@ -1,6 +1,6 @@
 package academyapi.servicepagone;
 
-import academyapi.GetUsers;
+import academyapi.utils.GetUsers;
 import academyapi.baseservice.BaseService;
 import academyapi.pojos.User;
 import io.restassured.response.Response;
@@ -13,29 +13,30 @@ public class PostUsers extends BaseService {
 
     private Map<String, Object> userMap = new HashMap<>();
     private static final String API_URL = "https://5f836d476b97440016f4e6d9.mockapi.io/users";
+    private Response response;
 
     public void postUsers() {
         Set<User> userList = GetUsers.getUsers();
         for (User user : userList) {
             boolean emailAlreadyExist = emailAlreadyExist(user.getEmail());
             if (emailAlreadyExist) {
-                requestPostMethod(API_URL, getUserMap(user));
-            } else {
                 Logger.getLogger("Email").log(Level.WARNING, "Email Already Exist");
+            } else {
+                response = requestPostMethod(API_URL, getUserMap(user));
             }
         }
     }
 
     private Boolean emailAlreadyExist(String email) {
-        Response response = requestGetMethod(API_URL);
+        response = requestGetMethod(API_URL);
         boolean notEmpty = response.getBody().print().contains("id");
         if (notEmpty) {
             List<String> mails = response.jsonPath().getList("email");
             for (String mail : mails) {
-                if (email.equals(mail)) return false;
+                if (email.equals(mail)) return true;
             }
         }
-        return true;
+        return false;
     }
 
     private Map<String, Object> getUserMap(User user) {

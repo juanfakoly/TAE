@@ -6,7 +6,6 @@ import java.util.List;
 
 public class VerifyAPI extends BaseService {
 
-
     private static final String API_URL = "https://5f836d476b97440016f4e6d9.mockapi.io/users";
 
     public void isEmpty() {

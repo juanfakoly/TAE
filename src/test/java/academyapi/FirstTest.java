@@ -3,8 +3,7 @@ package academyapi;
 import academyapi.servicepagone.CreateIssue;
 import academyapi.servicepagone.PostUsers;
 import academyapi.servicepagone.VerifyAPI;
-import academyapi.servicepagone.VerifyIdIssue;
-import io.restassured.response.Response;
+import academyapi.utils.VerifyIdIssue;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -14,7 +13,6 @@ import org.testng.annotations.Test;
  * @author Brayhan.Criollo
  */
 public class FirstTest {
-    Response response;
 
    @Test(priority = 0)
     public void verifyAPI() {

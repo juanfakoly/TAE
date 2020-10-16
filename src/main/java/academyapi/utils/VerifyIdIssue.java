@@ -1,4 +1,4 @@
-package academyapi.servicepagone;
+package academyapi.utils;
 
 public class VerifyIdIssue {
 
