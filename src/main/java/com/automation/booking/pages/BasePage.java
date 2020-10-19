@@ -1,4 +1,4 @@
-package com.automation.espn.pages;
+package com.automation.booking.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

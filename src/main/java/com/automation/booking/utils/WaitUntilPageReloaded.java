@@ -1,4 +1,4 @@
-package com.automation.espn.utils;
+package com.automation.booking.utils;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
